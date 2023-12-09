@@ -1,0 +1,55 @@
+.icon {
+    width: 65px;
+}
+
+.wrapper {
+    background-color: white;
+}
+
+.hr {
+    width: 90%;
+    color: #DEDDDD;
+}
+
+@media(min-width: 576px) {
+    .wrapper {
+        border-radius: 4px;
+        margin: 1rem 0;
+    }
+}
+
+@media(min-width: 993px) {
+    .wrapper {
+        min-height: 580px;
+    }
+    .firstColumn {
+        min-width: 50%;
+    }
+    .sidewayNavCol {
+        min-width: 50%;
+        border-left: 1px solid #DEDDDD;        
+    }
+    .cardsWrapper {
+        height: 400px;
+        overflow-y: scroll; 
+        overflow-x: hidden;        
+    }
+}
+
+@media(min-width: 1080px) {    
+    .cardsWrapper {
+        height: 85%;
+        max-height: 500px;    
+        overflow-y: scroll; 
+        overflow-x: hidden;       
+    }
+}
+
+@media(min-width: 1400px) {    
+    .cardsWrapper {
+        height: 85%;
+        max-height: 550px;    
+        overflow-y: scroll; 
+        overflow-x: hidden;       
+    }
+}

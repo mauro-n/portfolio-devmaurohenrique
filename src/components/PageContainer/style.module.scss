@@ -1,0 +1,20 @@
+.wrapper {
+    background-color: white;
+    overflow: hidden;
+}
+
+@media(min-width: 576px) {
+    .wrapper {
+        border-radius: 4px;
+        margin: 1rem 0;
+    }
+}
+
+@media(min-width: 993px) {
+    .wrapper {
+        min-height: 580px;
+    }
+    .locked {
+        max-height: 90vh;
+    }
+}

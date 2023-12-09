@@ -1,0 +1,36 @@
+@import '../../assets/_style.scss';
+.heading {
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+}
+
+.heading1 {
+    font-size: $hs-1;
+    line-height: 100%;
+}
+
+.heading2 {
+    font-size: $hs-2;
+}
+
+.heading3 {
+    font-size: $hs-3;
+}
+
+.heading4 {
+    font-size: $hs-4;
+}
+
+.overline {
+    font-weight: 300;
+    letter-spacing: 25%;
+    text-transform: uppercase;
+}
+
+@media(max-width: 576px) {
+    .heading1 {
+        font-size: $shs-1;
+    }
+
+}

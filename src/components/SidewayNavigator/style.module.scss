@@ -1,0 +1,15 @@
+.disabled {
+    pointer-events: none;
+    filter: opacity(.3);    
+}
+
+.arrow {
+    user-select: none;
+    transform: scale(1.3);
+    
+}
+
+.clickable-area {
+    padding: .5rem 0;
+    cursor: pointer;
+}

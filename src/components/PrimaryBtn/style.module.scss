@@ -1,0 +1,17 @@
+@import '../../assets/_style.scss';
+
+.btn {
+    display: block;
+    width: 55%;
+    margin: 0 auto;
+    border: none;
+    border-radius: 4px;
+    background-color: $darkOrange;
+    color: white;
+    font-size: 15px;
+    padding: 4px 0;
+}
+
+.btn:hover {
+    background-color: $color-primary-3;
+}
