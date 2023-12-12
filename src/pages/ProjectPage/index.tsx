@@ -33,6 +33,7 @@ export const ProjectPage = ({ deployUrl, sourceFigma, photos, description, icon,
     const carousel = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
+        window.scrollTo({ top: 0 })
         if (carousel.current) {
             const xConstraint = carousel.current.scrollWidth - carousel.current.offsetWidth
             setWidth(xConstraint)
