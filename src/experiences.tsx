@@ -27,13 +27,13 @@ const experience3 = <ExperienceCard
     date='ABR/22 - JUN/23'
 /> as ExperienceCard
 
-const experience4 = <ExperienceCard
-    title='Auxiliar Administrativo'
-    company='Cometa Supermercados'
-    description='Trabalhei em equipe como office boy, coletando assinaturas, confeccionando e auditando documentos diversos, organizando e realizando o controle de saídas de almoxarifado.'
-    icon={cometaLogo}
-    date='SET/19 - NOV/20'
-/> as ExperienceCard
+// const experience4 = <ExperienceCard
+//     title='Auxiliar Administrativo'
+//     company='Cometa Supermercados'
+//     description='Trabalhei em equipe como office boy, coletando assinaturas, confeccionando e auditando documentos diversos, organizando e realizando o controle de saídas de almoxarifado.'
+//     icon={cometaLogo}
+//     date='SET/19 - NOV/20'
+// /> as ExperienceCard
 
 
-export default [experience1, experience2, experience3, experience4]
+export default [experience1, experience2, experience3]
