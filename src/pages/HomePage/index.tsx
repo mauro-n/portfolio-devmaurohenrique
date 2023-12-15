@@ -51,7 +51,7 @@ export const HomePage = () => {
                     Sobre
                 </Heading>
                 <Text className="mt-2 pe-5">
-                    Minhas experiências práticas envolvem a área de Front-end, seja no planejamento, design ou implementação. Adoro começar um novo projeto e criar coisas.
+                Oi, eu sou o Mauro! Desenvolvo soluções Frontend e Fullstack, também prototipo interfaces, implemento e integro. Aqui eu posto minha trajetória e projetos :)
                 </Text>
                 <Heading as='h2' size={2}>
                     Ferramentas
