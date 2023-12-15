@@ -2,8 +2,17 @@ import { ExperienceCard } from "./components/ExperienceCard"
 import jdLogo from './assets/logo-jdRosa.png'
 import cometaLogo from './assets/cometaLogo.png'
 import soulLogo from './assets/soul_bilingue_logo.jfif'
+import iredeLogo from './assets/iredeLogo.png'
 
 const experience1 = <ExperienceCard
+    title='Bolsista em Desenvolvimento Fullstack'
+    company='IREDE - Instituto de Gestão, Redes Tecnológicas e Energias'
+    description='Desenvolvo e integro componentes front-end e back-end em um projeto web, utilizando JavaScript, HTML, CSS, React, Node.js e Express. Atuo em equipe para criar APIs e interfaces para aplicações com usuários, garantindo a responsividade, interatividade e boa experiência.'
+    icon={iredeLogo}
+    date='DEZ/23 - ATUAL'
+/> as ExperienceCard
+
+const experience2 = <ExperienceCard
     title='Monitor de Frontend'
     company='IJI - Instituto Jovem Inovação'
     description='Atuei como facilitador de aprendizado para alunos do projeto Trilhas, elaborando oficinas e grupos de estudo, trazendo conteúdos de programação relacionados a Javascript, prototipagem e design de interfaces de aplicações cobrindo os fundamentos do design e usabilidade. Trabalhei em conjunto com a equipe de dados do Trilhas desenvolvendo aplicações web e desktop para automação de tarefas e tratamento de dados utilizando Python e React. Desenvolvi e implementei o JD – Busca Bairro, uma aplicação desktop para automatizar a tarefa de tratar dados de mais de 6 mil registros de alunos. Desenvolvi a calculadora de NPS, uma ferramenta Web para cálculo da métrica NPS – auxiliando a equipe de dados a realizar cálculos de dados em planilhas, com foco na eficiência e experiência do usuário;'
@@ -11,7 +20,7 @@ const experience1 = <ExperienceCard
     date='AGO/23 - DEZ/23'
 /> as ExperienceCard
 
-const experience2 = <ExperienceCard
+const experience3 = <ExperienceCard
     title='Volunteer English Mentor'
     company='Soul Bilíngue'
     description='Acolho e dou suporte na jornada do aluno Soul, auxiliando no processo de aprendizagem de inglês como um facilitador para o melhor desenvolvimento do jovem e democratização do inglês.'
@@ -19,7 +28,7 @@ const experience2 = <ExperienceCard
     date='NOV/23 - ATUAL'
 /> as ExperienceCard
 
-const experience3 = <ExperienceCard
+const experience4 = <ExperienceCard
     title='Administrador'
     company='Cometa Supermercados'
     description='Atuei na coordenação de atividades relacionandas aos setores de recursos humanos, almoxarifado, patrimônio e SESMT. Gerenciava e auditava documentos diversos como atestados e declarações, controles de frequencias, escalas de folgas e férias. Criava e acompanhava planilhas de controle de gastos e desempenho.'
@@ -36,4 +45,4 @@ const experience3 = <ExperienceCard
 // /> as ExperienceCard
 
 
-export default [experience1, experience2, experience3]
+export default [experience1, experience2, experience3, experience4]
