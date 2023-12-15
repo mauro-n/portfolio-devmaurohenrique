@@ -3,6 +3,7 @@ import { ProjectPage } from "./pages/ProjectPage"
 import jdLogo from './assets/logo-jdRosa.png'
 import python from './assets/icons8-python-96.png';
 import figma from './assets/icons8-figma-96.png';
+import SQLiteIcon from './assets/SQLiteIcon.png'
 import reactIcon from './assets/icons8-react-100.png';
 import jsIcon from './assets/icons8-js-96.png'
 // Images
@@ -15,24 +16,24 @@ export const projetoBuscaBairro = <ProjectPage
   icon={jdLogo}
   titulo='Projeto Busca Bairro'
   company='Juventude Digital'
-  about='O projeto foi prototipado com o figma e codado em python, se comunica com uma API pública de CEPS para tratar os dados e também tem um banco de dados local. Gostei muito de ter implementado esse projeto pois foram alcançados resultados muito positivos para o programa trilhas.'
-  description='Enquanto trabalhava com a analista de dados do juventude digital, notei um problema no banco de dados do programa trilhas que a impedia de conseguir dados demográficos para o relatório do anuário da câmara: os registros das localidades da maior parte dos alunos estava salvo como CEP!
+  about='O projeto foi prototipado com o Figma e codado em Python, se comunica com uma API pública de CEPS para tratar os dados e também tem um banco de dados local (SQLite). Gostei muito de ter implementado esse projeto pois foram alcançados resultados muito positivos para o programa trilhas e pude aplicar conhecimentos de optimização de bancos de dados e algoritmos.'
+  description='Enquanto trabalhava com a analista de dados do juventude digital, notei um problema no banco de dados do programa trilhas que a impedia de conseguir dados demográficos para o relatório anuário para a câmara: os registros das localidades da maior parte dos alunos estava salvo como CEP nas planilhas e precisávamos de dados mais precisos.
   
-  O CEP por sí só não é um dado que trás tanta informação, pois se trata de um número de 8 dígitos que "não diz nada". Para ser utilizado para análises mais efetivas teria de ser buscado o endereço atribuído aquele cep, mas dada a grande quantidade, era impossível fazer manualmente a tempo do prazo de entrega do relatório.
+  O CEP por sí só não trazia a informação necessária para as análises. Para ser utilizado de forma mais efetiva teria de ser buscado o endereço atribuído aquele CEP, e devido a grande quantidade, era impossível fazer manualmente a tempo do prazo de entrega do relatório.
   
-  Dessa conversa surgiu a ideia do JD - Busca Bairro, uma solução para esse problema. Comecei a prototipar a interface do aplicativo levando em consideração a usabilidade e o limite de tempo que teria para implementar. Mantive a identidade visual do programa, e me guiei pelas heurísticas de Nielsen. Depois de algumas iterações e coleta de feedback cheguei ao protótipo final e estava pronto para implementação.
+  Diante dessa situação surgiu a ideia do JD - Busca Bairro, uma solução de automação para essa tarefa. Comecei a prototipar a interface do aplicativo levando em consideração a usabilidade e o limite de tempo que teria para implementar. Mantive a identidade visual do programa e me guiei pelas heurísticas de Nielsen. Depois de algumas iterações e coleta de feedback cheguei ao protótipo final e estava pronto para implementação.
   
-  A primeira ideia que eu tive foi a de usar uma API pública, iterar sobre os CEPs dentro da planilha e escrever na célula adjacente. Fazia muito tempo que havia trabalhado com Threads e houveram desafios na comunicação com a API externa. Depois de alguns dias havia um MVP com a interface fiel ao protótipo, contudo, um problema: a aplicação não atendia os requisitos de perfomance.
+  A primeira ideia que eu tive foi a de usar uma API pública, iterar sobre os CEPs dentro da planilha e escrever na célula adjacente. Fazia muito tempo que havia trabalhado com Threads e houveram desafios na comunicação com a API externa mas depois de alguns dias havia um MVP com a interface fiel ao protótipo, contudo, um problema: a aplicação não atendia os requisitos de perfomance.
   
   O processo de comunicação e resposta com a API estava demorando muito devido a instabilidades na conexão, chegando a aproximadamente 1 segundo para cada CEP. E quando se escalava para números mais altos (1000, 2000 CEPs etc..) percebemos que mudanças precisavam ser feitas.
   
-  Com conhecimentos adquiridos do livro Entendendo algoritmos - do Aditya Y.Bhargava notei que utilizar um banco de dados local iria solucionar o problema, pois a busca binária trabalha com a notação O(log n) e além disso, iria ser desnecessário a conexão com a internet.
+  Com conhecimentos adquiridos do livro Entendendo algoritmos - do Aditya Y.Bhargava notei que utilizar um banco de dados local iria solucionar o problema, pois CEPs são dados ordenáveis e a busca binária trabalha com a notação O(log n) e além disso, iria ser desnecessário a conexão com a internet.
   
   Só que não existia um banco de dados pronto com todos os CEPs do Nordeste. Em minhas buscas, consegui acesso a mais de 1 milhão de arquivos JSON de ceps que estavam disponíveis em uma API pública. Baixei os JSONs, criei um script em python para iterar sobre eles e salvar em um banco de dados SqLite usando a coluna CEP como chave primária para otimizar a busca binária.
   
   E depois de muitas horas de "INSERT INTO.." voilá! Estava resolvido o problema de performance, o tempo de escrita por CEP foi reduzido para menos de 10ms com a busca local. A busca online continuou como um fallback, caso o CEP não fosse achado na BD e a aplicação serviu seu propósito, tratando os dados de mais de 6 mil alunos, e permitindo análises demográficas a tempo do prazo de entrega do relatório.
   '
-  tools={[python, figma]}
+  tools={[python, figma, SQLiteIcon]}
   photos={bbImages}
   sourceUrl="https://github.com/mauro-n/JD-busca-bairro"
   sourceFigma="https://www.figma.com/file/YsD5r6BHN3mgoz7t9zDx0i/Busca-Bairro?type=design&node-id=0%3A1&mode=design&t=hsuFsP0Leb5rksTD-1"
