@@ -1,0 +1,54 @@
+@import '../../assets/_style.scss';
+$size1: 65px;
+$size2: 55px;
+$size3: 45px;
+$size4: 35px;
+
+.icon-wrapper {
+    height: 100px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    bottom: 0px;
+    margin: 0;
+    background-color: #3a89e4;
+    border-radius: 4px;
+    padding: 1px 6px;
+    color: white;
+}
+
+.icon {
+    &:hover {
+        cursor: pointer;         
+    }
+
+    &:hover ~ p {
+        display: block;
+    }
+
+    &:hover + p {
+        display: block;
+    }
+
+}
+
+.icon1 {
+    width: $size1;
+    height: $size1;
+}
+.icon2 {
+    width: $size2;
+    height: $size2;
+}
+.icon3 {
+    width: $size3;
+    height: $size3;
+}
+.icon4 {
+    width: $size4;
+    height: $size4;
+}

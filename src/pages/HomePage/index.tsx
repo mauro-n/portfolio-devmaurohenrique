@@ -9,11 +9,12 @@ import { SidewayNavigator, sidewayNavigatorConfig } from "../../components/Sidew
 import profilePic from '../../assets/Fotos Sandy Albuquerque - sandyfalb_70.jpg';
 import github from '../../assets/icons8-github-96.png';
 import linkedin from '../../assets/icons8-linkedin-96.png';
-import javascript from '../../assets/icons8-js-96.png';
+import typescript from '../../assets/typeLogo.png';
 import react from '../../assets/icons8-react-100.png';
 import python from '../../assets/icons8-python-96.png';
 import figma from '../../assets/icons8-figma-96.png';
 import sqlIcon from '../../assets/base-de-dados.png';
+import { ToolIcon } from "../../components/ToolIcon";
 
 export const HomePage = () => {
 
@@ -56,13 +57,13 @@ export const HomePage = () => {
                 <Heading as='h2' size={2}>
                     Ferramentas
                 </Heading>
-                <div className="d-flex mt-2 gap-1 gap-lg-3">
-                    <img className={style["icon"]} src={javascript} alt="Javascript icon" />
-                    <img className={style["icon"]} src={react} alt="React icon" />
-                    <img className={style["icon"]} src={python} alt="Python icon" />
-                    <img className={style["icon"]} src={figma} alt="Figma icon" />
-                    <img className={style["icon"]} src={sqlIcon} alt="SQL icon" />
-                </div>
+                <div className="d-flex mt-3 gap-1 gap-lg-3 align-items-center">
+                    <ToolIcon src={typescript} iconSize={2} alt="Typescript"/>                    
+                    <ToolIcon src={react} iconSize={1} alt="React"/>                    
+                    <ToolIcon src={python} iconSize={1} alt="Python"/>                    
+                    <ToolIcon src={figma} iconSize={1} alt="Figma"/>                    
+                    <ToolIcon src={sqlIcon} iconSize={1} alt="SQL"/>                                        
+                </div> 
             </div>
             <div className={`${style['sidewayNavCol']} ps-lg-4`}>
                 <SidewayNavigator config={navigatorOpt} />
