@@ -33,7 +33,11 @@ export const projetoBuscaBairro = <ProjectPage
   
   E depois de muitas horas de "INSERT INTO.." voilá! Estava resolvido o problema de performance, o tempo de escrita por CEP foi reduzido para menos de 10ms com a busca local. A busca online continuou como um fallback, caso o CEP não fosse achado na BD e a aplicação serviu seu propósito, tratando os dados de mais de 6 mil alunos, e permitindo análises demográficas a tempo do prazo de entrega do relatório.
   '
-  tools={[python, figma, SQLiteIcon]}
+  tools={[
+    { description: 'Python', src: python },
+    { description: 'Figma', src: figma },
+    { description: 'SQLite', src: SQLiteIcon }
+  ]}
   photos={bbImages}
   sourceUrl="https://github.com/mauro-n/JD-busca-bairro"
   sourceFigma="https://www.figma.com/file/YsD5r6BHN3mgoz7t9zDx0i/Busca-Bairro?type=design&node-id=0%3A1&mode=design&t=hsuFsP0Leb5rksTD-1"
@@ -45,7 +49,10 @@ export const projetoCalculadora = <ProjectPage
   company='Juventude Digital'
   about='Projeto prototipado com Figma e implementado com React, projetado para ser uma solução para uma dor específica da equipe de análise de dados.'
   description='Quando comecei a trabalhar nos dados do programa Trilhas, fui apresentado a definição de NPS e vi que era amplamente utilizado para coleta de métricas de satisfação. Contudo era um processo que era feito manualmente, e haviam dificuldades na visualização desses dados. Decidi implementar essa ferramenta com o intuito de ser algo fácil de utilizar e trazer exatamente os dados que eram buscados pela equipe. Fiz o protótipo e planejei para que pudesse ser usado com apenas uma ação do usuário, visando a eficiência e comodidade da equipe. Após ter sido aprovado o design, implementei com React e hospedei online para uso de qualquer computador. Aproveitei para testar uma lib nova de internacionalização e fazer uma versão em inglês também.'
-  tools={[reactIcon, figma]}
+  tools={[
+    { description: 'ReactJS', src: python },
+    { description: 'Figma', src: figma }
+  ]}
   photos={npsImages}
   sourceUrl='https://github.com/mauro-n/NPS-calculator'
   deployUrl="https://nps.ferramenta.cc/"
@@ -55,7 +62,10 @@ export const projetoLandingPage = <ProjectPage
   titulo='Landing Page da Chat&Call'
   company='Projeto pessoal'
   about='Landing page implementada usando HTML, CSS e JS - design projetado no Figma. Ícones e imagens usadas foram feitas com inteligência artificial, Adobe Photoshop e Figma . A ideia do site é manter um visual mais conservativo já que se trata de um aplicativo voltado ao mundo corporativo tradicional.'
-  tools={[jsIcon, figma]}
+  tools={[
+    { description: 'Figma', src: figma },
+    { description: 'Javascript', src: jsIcon }
+  ]}
   photos={chatCallImages}
   sourceUrl='https://github.com/mauro-n/chat-call-landingPage'
   deployUrl="https://mauro-n.github.io/chat-call-landingPage/"
@@ -65,7 +75,7 @@ export const projetoPokedex = <ProjectPage
   titulo='Réplica da Pokedex'
   company='Projeto Pessoal'
   about='Minha implementação da Pokedex, usando a API pública pokeApi - codado em HTML, CSS e Js vanilla usando orientação a protótipos. Repliquei a pokedex do jogo Fire Red de Gameboy Advanced'
-  tools={[jsIcon]}
+  tools={[{ description: 'Javascript', src: jsIcon }]}
   photos={pokemons}
   sourceUrl='https://github.com/mauro-n/pokedex'
   deployUrl="https://pokedex-mauro-n.vercel.app/"
@@ -77,7 +87,10 @@ export const projetoSaper = <ProjectPage
   company='IFCE - Instituto '
   about='Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien. Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien.'
   description='Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque.'
-  tools={[reactIcon, figma]}
+  tools={[
+    { description: 'ReactJS', src: reactIcon },
+    { description: 'Figma', src: figma }
+  ]}
   photos={npsImages}
   sourceUrl='https://github.com/mauro-n/pokedex'
 />

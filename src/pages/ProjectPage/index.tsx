@@ -13,6 +13,8 @@ import github from '../../assets/icons8-github-96.png'
 import figma from '../../assets/icons8-figma-96.png'
 //import me from '../../assets/Fotos Sandy Albuquerque - sandyfalb_70.jpg'
 import external from '../../assets/external_link_icon.svg'
+import { ToolIcon } from '../../components/ToolIcon'
+import { tool } from '../..'
 
 interface ProjectPage {
     icon?: string,
@@ -22,7 +24,7 @@ interface ProjectPage {
     sourceFigma?: string,
     deployUrl?: string,
     about?: string,
-    tools?: string[],
+    tools?: tool[],
     description?: string,
     photos?: string[]
 }
@@ -147,14 +149,9 @@ export const ProjectPage = ({ deployUrl, sourceFigma, photos, description, icon,
                     <Heading as='h2' size={3} className='mt-4'>
                         Ferramentas:
                     </Heading>
-                    <div className="d-flex gap-3 my-3">
+                    <div className="d-flex gap-3 mt-4">
                         {tools?.map((el, index) => {
-                            return <img
-                                key={index}
-                                src={el}
-                                alt=""
-                                className={style['tool']}
-                            />
+                            return <ToolIcon key={index} alt={el.description} src={el.src} />
                         })}
                     </div>
                 </div>
