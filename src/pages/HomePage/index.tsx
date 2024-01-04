@@ -28,7 +28,7 @@ export const HomePage = () => {
         <>
             <div className={style['firstColumn']}>
                 <div className="d-flex gap-4 align-items-center mb-4">
-                    <ProfilePic src={profilePic} />
+                    <ProfilePic alt="Foto minha, sorrindo, durante um evento na sede do Juventude Digital." src={profilePic} />
                     <div>
                         <Heading>
                             Mauro Henrique
