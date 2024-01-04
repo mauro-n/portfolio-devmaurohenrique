@@ -116,10 +116,13 @@ export const SidewayNavigator = ({ config }: SidewayNavigator) => {
     }, [current])
 
     return (
-        <div
+        <nav
             className="d-flex mb-4 mt-5 mt-lg-1 justify-content-center align-items-center"
         >
             <div
+                aria-label='Go to previous Page'
+                tabIndex={0}
+                role='link'
                 onClick={previousPage}
                 className={`
                     ${current?.hasPrevious ? '' : style['disabled']}  
@@ -142,6 +145,9 @@ export const SidewayNavigator = ({ config }: SidewayNavigator) => {
                 {current?.key || 'Carregando'}
             </Heading>
             <div
+                aria-label='Go to next Page'
+                tabIndex={1}
+                role='link'
                 onClick={nextPage}
                 className={`
                     ${current?.hasNext ? '' : style['disabled']}  
@@ -160,6 +166,6 @@ export const SidewayNavigator = ({ config }: SidewayNavigator) => {
                     alt="seta para a direita"
                 />
             </div>
-        </div>
+        </nav>
     )
 }

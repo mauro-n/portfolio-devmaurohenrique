@@ -12,7 +12,7 @@ export interface EducationCard extends Card {
 
 export const EducationCard = ({ iconSize = 1, credentialUrl, icon, institution, title = '', description }: EducationCard) => {
     return (
-        <div className={style['wrapper']}>
+        <article className={style['wrapper']}>
             <div className="d-flex gap-3 align-items-center mx-3">
                 <img src={icon} alt="" className={style[`icon${iconSize}`]} />
                 <div>
@@ -32,6 +32,6 @@ export const EducationCard = ({ iconSize = 1, credentialUrl, icon, institution, 
                 </a> :
                 <></>
             }
-        </div>
+        </article>
     )
 }

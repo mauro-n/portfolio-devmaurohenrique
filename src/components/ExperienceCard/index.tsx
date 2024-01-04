@@ -12,7 +12,7 @@ export const ExperienceCard = ({ icon, company, date, title = '', description }:
     const textCenter = { textAlign: 'center' } as React.CSSProperties
 
     return (
-        <div className={style["wrapper"]}>
+        <article className={style["wrapper"]}>
             <Heading as='h4' size={3} style={textCenter}>
                 {title}
             </Heading>
@@ -32,6 +32,6 @@ export const ExperienceCard = ({ icon, company, date, title = '', description }:
             <Text size={2} className="text-secondary text-center mt-2">
                 {date}
             </Text>
-        </div>
+        </article>
     )
 }

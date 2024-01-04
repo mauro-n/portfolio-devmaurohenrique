@@ -47,18 +47,9 @@ export const ProjectPage = ({ deployUrl, sourceFigma, photos, description, icon,
             className='position-relative px-lg-3'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-        >
-            {/* <div className={style['floating-goback']}>
-                {'<'}
-            </div> */}
-            <div className={style['header']}>
-                {icon ?
-                    <img className={style['icon']} src={icon} alt="" /> :
-                    <></>
-                    //<div className='d-flex justify-content-center mb-2'>
-                    //    <ProfilePic src={me} size={2} />
-                    //</div>
-                }
+        >            
+            <section className={style['header']}>
+                {icon?<img className={style['icon']} src={icon} alt="" />:<></>}
                 <div className='flex-grow-1 mt-lg-1'>
                     <Heading size={2} className='text-center text-lg-start'>
                         {titulo}
@@ -67,8 +58,8 @@ export const ProjectPage = ({ deployUrl, sourceFigma, photos, description, icon,
                         {company}
                     </Text>
                 </div>
-            </div>
-            <div className='d-lg-flex flex-row-reverse gap-2 justify-content-between'>
+            </section>
+            <section className='d-lg-flex flex-row-reverse gap-2 justify-content-between'>
                 <motion.div ref={carousel} className={style['carousel']}>
                     <motion.div
                         drag="x"
@@ -88,7 +79,7 @@ export const ProjectPage = ({ deployUrl, sourceFigma, photos, description, icon,
                         })}
                     </motion.div>
                 </motion.div>
-                <div className={`${style['sourceLinks']} pt-5 pt-lg-4`}>
+                <nav className={`${style['sourceLinks']} pt-5 pt-lg-4`}>
                     {sourceUrl ?
                         <a
                             className={`${style['github-link']} d-lg-flex gap-2 align-items-center`}
@@ -138,8 +129,8 @@ export const ProjectPage = ({ deployUrl, sourceFigma, photos, description, icon,
                         </a> :
                         ''
                     }
-                </div>
-                <div className={`${style['column1']} mt-3 mt-lg-3`}>
+                </nav>
+                <section className={`${style['column1']} mt-3 mt-lg-3`}>
                     <Heading as='h2' size={3}>
                         Sobre
                     </Heading>
@@ -149,13 +140,13 @@ export const ProjectPage = ({ deployUrl, sourceFigma, photos, description, icon,
                     <Heading as='h2' size={3} className='mt-4'>
                         Ferramentas:
                     </Heading>
-                    <div className="d-flex gap-3 mt-4">
+                    <ul className="list-unstyled d-flex gap-3 mt-4">
                         {tools?.map((el, index) => {
-                            return <ToolIcon key={index} alt={el.description} src={el.src} />
+                            return <li key={index}><ToolIcon alt={el.description} src={el.src} /></li>
                         })}
-                    </div>
-                </div>
-            </div>
+                    </ul>
+                </section>
+            </section>
             {description ?
                 <>
                     <Heading as='h2' size={3} className='mt-2'>
@@ -169,6 +160,7 @@ export const ProjectPage = ({ deployUrl, sourceFigma, photos, description, icon,
             }
 
             <PrimaryBtn
+                role='link'                
                 onClick={() => navigate('/')}
                 className='w-25 mt-5'
             >

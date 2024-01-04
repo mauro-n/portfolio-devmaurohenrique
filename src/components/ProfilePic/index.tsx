@@ -5,14 +5,14 @@ interface ProfilePic extends React.HTMLProps<HTMLImageElement> {
     props?: any
 }
 
-export const ProfilePic = ({ className, size = 1, ...props }: ProfilePic) => {
+export const ProfilePic = ({ alt, className, size = 1, ...props }: ProfilePic) => {
 
     return (
         <div className={`
             ${style['wrapper']}
             ${style[`size-${size}`]}
         `}>
-            <img {...props}
+            <img {...props} alt={alt}
                 className={`
                 ${style['img']}
                 ${style[`imgSize-${size}`]}

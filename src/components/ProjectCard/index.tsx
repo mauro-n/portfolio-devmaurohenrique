@@ -25,7 +25,7 @@ export const ProjectCard = ({ iconSize = 1, title = '', icon, description, url =
     }
 
     return (
-        <div className={style['wrapper']}>
+        <article className={style['wrapper']}>
             <div className="d-flex gap-3 align-items-center mb-3 mx-3 mt-1">
                 {icon ?
                     <img
@@ -44,6 +44,6 @@ export const ProjectCard = ({ iconSize = 1, title = '', icon, description, url =
             <PrimaryBtn onClick={() => seeProject(url)}>
                 Ver mais
             </PrimaryBtn>
-        </div>
+        </article>
     )
 }
